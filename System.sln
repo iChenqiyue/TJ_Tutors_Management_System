@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System", "WindowsFormsApp1\System.csproj", "{556D8AFD-620C-4CD0-9057-5BBB8BEC7AD8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstallDB", "InstallDB\InstallDB.csproj", "{A811D4EF-6784-4CAE-8ADF-728D43C874D5}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Syetem_setup", "Syetem_setup\Syetem_setup.vdproj", "{ABEB7949-0CA2-4530-A418-2E939AFEEFDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,12 @@ Global
 		{556D8AFD-620C-4CD0-9057-5BBB8BEC7AD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{556D8AFD-620C-4CD0-9057-5BBB8BEC7AD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{556D8AFD-620C-4CD0-9057-5BBB8BEC7AD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A811D4EF-6784-4CAE-8ADF-728D43C874D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A811D4EF-6784-4CAE-8ADF-728D43C874D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A811D4EF-6784-4CAE-8ADF-728D43C874D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A811D4EF-6784-4CAE-8ADF-728D43C874D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABEB7949-0CA2-4530-A418-2E939AFEEFDA}.Debug|Any CPU.ActiveCfg = Debug
+		{ABEB7949-0CA2-4530-A418-2E939AFEEFDA}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

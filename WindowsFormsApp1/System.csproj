@@ -8,8 +8,24 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>TJ_Tutors_Management_System</RootNamespace>
     <AssemblyName>TJ_Tutors_Management_System</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -20,6 +36,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -29,11 +46,17 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo2.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,12 +67,108 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="backup.Designer.cs">
+      <DependentUpon>backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CCTRS.cs" />
+    <Compile Include="CmbClass.cs" />
     <Compile Include="CommDB.cs" />
+    <Compile Include="CmbDataGridview.cs" />
+    <Compile Include="ExportToExcel.cs" />
+    <Compile Include="Integral.cs" />
+    <Compile Include="new_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_add.Designer.cs">
+      <DependentUpon>new_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operator.Designer.cs">
+      <DependentUpon>Operator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QYForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QYForm.Designer.cs">
+      <DependentUpon>QYForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Responsibility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Responsibility.Designer.cs">
+      <DependentUpon>Responsibility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenCapture.cs" />
+    <Compile Include="Students_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students_Add.Designer.cs">
+      <DependentUpon>Students_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students_all.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students_all.Designer.cs">
+      <DependentUpon>Students_all.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students_Blacklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students_Blacklist.Designer.cs">
+      <DependentUpon>Students_Blacklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students_check.Designer.cs">
+      <DependentUpon>Students_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students_Inquire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students_Inquire.Designer.cs">
+      <DependentUpon>Students_Inquire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students_Revise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students_Revise.Designer.cs">
+      <DependentUpon>Students_Revise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Today_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Today_Form.Designer.cs">
+      <DependentUpon>Today_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tutors_Add.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tutors_Add.Designer.cs">
       <DependentUpon>Tutors_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutors_All_Inform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutors_All_Inform.Designer.cs">
+      <DependentUpon>Tutors_All_Inform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutors_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutors_check.Designer.cs">
+      <DependentUpon>Tutors_check.cs</DependentUpon>
     </Compile>
     <Compile Include="Tutors_Inquire.cs">
       <SubType>Form</SubType>
@@ -71,8 +190,98 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tutors_management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutors_management.Designer.cs">
+      <DependentUpon>Tutors_management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutors_revise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutors_revise.Designer.cs">
+      <DependentUpon>Tutors_revise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutors_Track.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutors_Track.Designer.cs">
+      <DependentUpon>Tutors_Track.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users_Add.Designer.cs">
+      <DependentUpon>Users_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users_All.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users_All.Designer.cs">
+      <DependentUpon>Users_All.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workers_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Workers_Add.Designer.cs">
+      <DependentUpon>Workers_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workers_Inquire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Workers_Inquire.Designer.cs">
+      <DependentUpon>Workers_Inquire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workers_Revise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Workers_Revise.Designer.cs">
+      <DependentUpon>Workers_Revise.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="backup.resx">
+      <DependentUpon>backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_add.resx">
+      <DependentUpon>new_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operator.resx">
+      <DependentUpon>Operator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Responsibility.resx">
+      <DependentUpon>Responsibility.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students_Add.resx">
+      <DependentUpon>Students_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students_all.resx">
+      <DependentUpon>Students_all.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students_Blacklist.resx">
+      <DependentUpon>Students_Blacklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students_check.resx">
+      <DependentUpon>Students_check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students_Inquire.resx">
+      <DependentUpon>Students_Inquire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students_Revise.resx">
+      <DependentUpon>Students_Revise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Today_Form.resx">
+      <DependentUpon>Today_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tutors_Add.resx">
       <DependentUpon>Tutors_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutors_All_Inform.resx">
+      <DependentUpon>Tutors_All_Inform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutors_check.resx">
+      <DependentUpon>Tutors_check.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tutors_Inquire.resx">
       <DependentUpon>Tutors_Inquire.cs</DependentUpon>
@@ -93,7 +302,33 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="App.config" />
+    <EmbeddedResource Include="Tutors_management.resx">
+      <DependentUpon>Tutors_management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutors_revise.resx">
+      <DependentUpon>Tutors_revise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutors_Track.resx">
+      <DependentUpon>Tutors_Track.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users_Add.resx">
+      <DependentUpon>Users_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users_All.resx">
+      <DependentUpon>Users_All.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workers_Add.resx">
+      <DependentUpon>Workers_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workers_Inquire.resx">
+      <DependentUpon>Workers_Inquire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workers_Revise.resx">
+      <DependentUpon>Workers_Revise.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,6 +338,75 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\QQ图片20190223220706.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo2.ico" />
+    <None Include="Resources\hanson-lu-1252519-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
